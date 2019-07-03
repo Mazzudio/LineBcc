@@ -79,7 +79,7 @@ namespace BccService.Core
             }
         }
 
-        public ShareContentResult MoveContentToShareFolder(string contentId, string shareFolderId, string authenToken)
+        public ShareContentResult MoveContentToShareFolder(string imageTitle, string contentId, string shareFolderId, string authenToken)
         {
             try
             {
@@ -89,6 +89,7 @@ namespace BccService.Core
 
                 var body = new
                 {
+                    title = imageTitle,
                     parents = parents
                 };
 

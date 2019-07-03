@@ -77,7 +77,7 @@ namespace BccService.Core
                 var resultObj = serializer.Deserialize<GoogleDriveUploadResultModel>(uploadRes.Message);
 
                 // Move content to share folder.
-                var moveRes = _driveContractor.MoveContentToShareFolder(resultObj.id, "1JP8Bem2LvUtV0ByYR_7PBx_Kbu8PxFbU", googleDriveToken);
+                var moveRes = _driveContractor.MoveContentToShareFolder(messageId, resultObj.id, "1JP8Bem2LvUtV0ByYR_7PBx_Kbu8PxFbU", googleDriveToken);
 
                 if (!moveRes.Success)
                 {
